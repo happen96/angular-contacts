@@ -1,23 +1,23 @@
-<div>
-	<div [ngStyle]="{'background-image':'url('+profilePhotoUrl+')'}">
+<div class="user">
+	<div class="user__photo" [ngStyle]="{'background-image':'url('+profilePhotoUrl+')'}">
 	</div>
-	<div>
+	<div class="user__info">
 		<h3>{{ contact.lastName }} {{ contact.firstName }} {{ contact.middleName }}</h3>
 		<div>
-			<div>
-				{{ contact.organization}}
+			<div class="user__info-prof-detail">
+				<p>{{ contact.organization}}</p>
 			</div>
-			<div>
-				{{ contact.department}}
+			<div class="user__info-prof-detail">
+				<p>{{ contact.department}}</p>
 			</div>
-			<div>
-				{{ contact.position}}
+			<div class="user__info-prof-detail">
+				<p>{{ contact.position}}</p>
 			</div>
-			<div>
-				{{ contact.phone}}
+			<div class="user__info-private">
+				<p>{{ contact.phone}}</p>
 			</div>
-			<div>
-				{{ contact.email}}
+			<div class="user__info-private">
+				<p>{{ contact.email}}</p>
 			</div>
 		</div>
 	</div>

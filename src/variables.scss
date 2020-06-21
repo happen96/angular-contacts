@@ -1,3 +1,22 @@
 /* You can add global variables to this file*/;
-$colorLightseagreen: lightseagreen;
-$colorLightsalmon: lightsalmon;
+$colorLightGrey: #A6AAAD;
+$colorLightBlack: #212121;
+$colorRed: #ED1C24;
+$bodyColor: #E5E5E5;
+$hoverColor: #8B0000;
+$formHoverColor: #18A0FB;
+$iconColor: #6E767D;
+
+
+@mixin max-width($width) {
+  max-width: $width;
+  width: 100%;
+  margin: 0 auto;
+}
+@mixin overflow-hidden($width) {
+  overflow: hidden;
+  max-height: $width;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}

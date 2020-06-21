@@ -1,7 +1,112 @@
 //import global project variables
 @import "../../../../variables.scss";
 
+ul {
+  column-count: 3;
+  padding: 30px 51px 0 93px;
+}
+li {
+  list-style: none;
+}
+.container {
+  background-color: #FFFFFF;
+  @include max-width(1395px);
+  margin: 0 auto 23px;
+}
+
 .paginator-block {
-  display: inline-flex;
-  background: $colorLightsalmon;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 0 56px;
+  cursor: pointer;
+}
+.page {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  border: 1px solid $iconColor;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 8px;
+  position: relative;
+  p {
+    color: $iconColor;
+  }
+  &:hover {
+    color: $hoverColor;
+    border: 1px solid $hoverColor;
+    p {
+      color: $hoverColor;
+    }
+  }
+}
+.active {
+  p {
+    color: $colorRed;
+  }
+  border: 1px solid $colorRed;
+}
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 8.5px;
+  height: 7.5px;
+  cursor: pointer;
+}
+
+.arrow {
+  position: absolute;
+  top: 2.5px;
+  width: 90%;
+  height: 2px;
+  background-color: $iconColor;
+}
+
+.arrow::after, .arrow::before {
+  content: '';
+  position: absolute;
+  width: 22%;
+  height: 8px;
+  right: -1px;
+  background-color: $iconColor;
+}
+
+.arrow::after {
+  top: -1px;
+  transform: rotate(45deg);
+}
+
+.arrow::before {
+  top: -5px;
+  transform: rotate(-45deg);
+}
+.page:hover .arrow, .page:hover .arrow::before, .page:hover .arrow::after{
+  background-color: $hoverColor;
+}
+
+
+@media only screen and (max-width: 1400px) {
+  .container {
+    @include max-width(1200px);
+    margin: 0 auto 23px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  ul {
+    column-count: 1;
+    padding: 30px 0;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

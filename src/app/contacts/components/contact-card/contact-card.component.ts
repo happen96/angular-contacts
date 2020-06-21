@@ -13,8 +13,6 @@ export class ContactCardComponent implements OnInit {
 	constructor() {
 		this.profilePhotoUrl = 'assets/images/photo.png';
 	}
-
 	ngOnInit() {
 	}
-
 }

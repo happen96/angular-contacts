@@ -1,0 +1,23 @@
+.header {
+  position: relative;
+  h1 {
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 26px;
+    padding: 24px 0;
+    text-align: center;
+  }
+  &:after {
+    content: '';
+    background-color: #D7D7D7;
+    height: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 98%;
+
+  }
+}
